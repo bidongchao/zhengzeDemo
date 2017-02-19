@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	/* match: 将匹配到的字符放到一个数组中
+		string.match (正则)
+
+		当匹配到的字符只有一个的时候，会显示出多个属性
+			index: 匹配字符的位置
+			input: 所有内容
+			而length为1
+
+	修饰符:  g :  查找全局
+
+	量词:    + :  最少一个,最多无限
+
+	|:  或者
+	
+
+	正则的特性：
+				懒惰模式：让他找几个他一定不会多找
+				贪婪模式：无限制的查找
+
+	*/
+
+		var str='北美空防司令部声明中表示，空军飞机以超音速飞过，很多当地居民对巨大的轰鸣声表示惊奇，据悉，歼击机成功地与这架飞机建立了联系';
+		var arr = str.match(/空军|飞机/g);
+		console.log(arr);
+	</script>
+</body>
+</html>

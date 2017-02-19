@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+	/*  |  代表或者
+
+
+	一般情况下 
+				函数内的第一个参数是当前匹配的字符
+				函数内的第二个参数是当前匹配字符的索引值
+				函数内的第三个参数是当前总的字符串
+				函数内的第四个以后参数都为undefined
+
+			注意: 如果使用函数,一定要有return,不然为undefined
+	*/
+		var str="中国共产党,习近平说:'要严厉打击法论功'";
+		var num= 0;
+		var changeStr=str.replace(/共产党|习近平|法论功/g,function($0,$1,$2,$3) {
+			//  每匹配成功一次，就会执行这个函数
+			num++;
+
+			//  第一个参数就是这次匹配到的内容
+			console.log($0,$1,$2,$3);
+			
+			var s='';
+			for(var i=0;i<$0.length;i++) {
+				s+='*';
+			}
+			return s;
+		});
+		console.log(changeStr);
+		console.log(num);
+	</script>
+</body>
+</html>
