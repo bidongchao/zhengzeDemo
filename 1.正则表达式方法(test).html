@@ -6,10 +6,13 @@
 </head>
 <body>
 	<script>
+		/*	正则.test( string )
+			检测是否是正则要匹配的内容
+		*/
+
 		// 需求:找字符串中是否含有数字
-		var str="ffve22kmd3e6ffh56";
-		var re=/\d/;
-		console.log(re.test(str));
+		var str="123";
+		console.log( /\D/.test(str) );	//  \D: 非数字	\d:一个数字	  \d+:多个数字
 	</script>
 </body>
 </html>
